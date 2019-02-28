@@ -18,5 +18,23 @@ public class EmployeeTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void testAge() {
+        int expected = 18;
+        Employee employee = new Employee();
+        employee.setAge(expected);
+        int actual = employee.getAge();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testNameAge() {
+        int expectedAge = 18;
+        Employee employee = new Employee();
+        employee.setAge(expectedAge);
+        int actual = employee.getAge();
+        assertEquals(expected, actual);
+    }
+
 
 }

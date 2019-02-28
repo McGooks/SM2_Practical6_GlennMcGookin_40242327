@@ -1,6 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.*;
 
 public class NumberCruncherTest {
@@ -72,6 +74,29 @@ public class NumberCruncherTest {
         int num5 = 0;
         NumberCruncher numberCruncher = new NumberCruncher();
         numberCruncher.divideNumbers(num4,num5);
+    }
+
+    @Test
+    public void testDoubleUp(){
+        int seed = 2;
+        int number = 4;
+        int[] expected = {2,4,8,16};
+
+        NumberCruncher numberCruncher = new NumberCruncher();
+        int[] actual = numberCruncher.doubleUp(seed,number);
+
+        System.out.println(Arrays.toString(actual));
+        boolean match = true;
+
+        for(int i = 0; i < expected.length; i++){
+            if(expected[i] == actual[i]){
+                match = true;
+            } else {
+                match = false;
+                break;
+            }
+        }
+        assertTrue(match);
     }
 
 }

@@ -27,4 +27,16 @@ public class NumberCruncher {
             return num1 / num2;
         }
     }
+
+    public int[] doubleUp(int seed, int number) {
+
+        int[] nums = new int[number];
+        nums[0] = seed;
+
+        for(int i = 1; i < number; i++){
+            nums[i] = nums[i - 1] * seed;
+        }
+
+        return nums;
+    }
 }
